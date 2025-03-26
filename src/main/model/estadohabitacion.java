@@ -1,5 +1,9 @@
 package src.main.model;
 
-public class estadohabitacion {
+public enum estadohabitacion {
     
+    DISPONIBLE,
+    RESERVADA,
+    OCUPADA
+
 }

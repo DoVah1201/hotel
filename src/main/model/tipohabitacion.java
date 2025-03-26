@@ -1,5 +1,9 @@
 package src.main.model;
 
-public class tipohabitacion {
+public enum tipohabitacion {
     
+    INDIVIDUAL,
+    DOBLE,
+    SUITE
+
 }
