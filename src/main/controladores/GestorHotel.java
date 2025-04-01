@@ -9,6 +9,7 @@ import src.main.model.estadohabitacion;
 import src.main.model.habitacion;
 import src.main.model.reserva;
 import src.main.model.tipohabitacion;
+import src.main.restricciones.excepcionesHotel;
 
 public class GestorHotel {
     public List<habitacion> habitaciones;
