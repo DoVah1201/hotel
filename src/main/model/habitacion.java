@@ -1,8 +1,8 @@
 package src.main.model;
 
 public class habitacion {
-    private int numHab;
-    private tipohabitacion tipo;
+    public int numHab;
+    public tipohabitacion tipo;
     private estadohabitacion estado;
     private String descripcion;
 

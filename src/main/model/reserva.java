@@ -27,7 +27,7 @@ public class reserva {
 
     private void precioCalculado() {
         long dia = ChronoUnit.DAYS.between(entrada, salida);
-        this.precioTotal = dia * habitacion.tipohabitacion.getPrecio();
+        this.precioTotal = dia * habitacion.tipo.getPrecio();
     }
 
     public String toString() {
