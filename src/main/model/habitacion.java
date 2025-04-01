@@ -2,18 +2,18 @@ package src.main.model;
 
 public class habitacion {
     private int numHab;
-    private tipoHab tipo;
-    private estadoHab estado;
+    private tipohabitacion tipo;
+    private estadohabitacion estado;
     private String descripcion;
 
-    public Habitacion(int numHab, tipoHab tipo, String descripcion) {
+    public habitacion(int numHab, tipohabitacion tipo, String descripcion) {
         this.numHab = numHab;
         this.tipo = tipo;
-        this.estado = estadoHab.DISPONIBLE;
+        this.estado = estadohabitacion.DISPONIBLE;
         this.descripcion = descripcion;
     }
     
-    public tipoHab getTipo() {
+    public tipohabitacion getTipo() {
         return tipo;
     }
 
