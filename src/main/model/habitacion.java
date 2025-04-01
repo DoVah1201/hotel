@@ -18,6 +18,6 @@ public class habitacion {
     }
 
     public String toString() {
-        return "Habitación" + numHab + " - " + tipo + " (" + estado + ") ";
+        return "Habitación " + numHab + " - " + tipo + " (" + estado + ") ";
     }
 }
