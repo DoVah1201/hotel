@@ -3,7 +3,7 @@ package src.main.model;
 public class habitacion {
     public int numHab;
     public tipohabitacion tipo;
-    private estadohabitacion estado;
+    public estadohabitacion estado;
     private String descripcion;
 
     public habitacion(int numHab, tipohabitacion tipo, String descripcion) {
