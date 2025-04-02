@@ -18,8 +18,8 @@ public class Main {
                 switch (opcion) {
                     case 1:
                         String nombreCliente = vista.obtenerDatosCliente();
-                        controlador.registrarCliente(nombreCliente);
-                        vista.mostrarExito("Cliente registrado exitosamente");
+                        int idCliente = controlador.registrarCliente(nombreCliente); // Capturar el ID devuelto
+                        vista.mostrarExito("Cliente registrado exitosamente. ID: " + idCliente); // Mostrar el ID
                         break;
 
                     case 2:
@@ -49,7 +49,7 @@ public class Main {
                     default:
                         vista.mostrarError("Opción no válida");
                 }
-            
+
             } catch (ExcepcionesHotel e) {
                 vista.mostrarError("Error: " + e.getMessage());
             } catch (NumberFormatException e) {

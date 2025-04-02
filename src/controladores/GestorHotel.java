@@ -40,9 +40,10 @@ public class GestorHotel {
         }
     }
 
-    public void registrarCliente(String nombre) {
+    public int registrarCliente(String nombre) {
         Cliente nuevoCliente = new Cliente(nombre);
         clientes.add(nuevoCliente);
+        return nuevoCliente.id;
     }
 
     public Habitacion buscarHabitacion(int numHab) throws ExcepcionesHotel {
@@ -64,28 +65,34 @@ public class GestorHotel {
     }
 
     public void hacerReserva(int numHab, int idCliente, LocalDate entrada, LocalDate salida) throws ExcepcionesHotel {
+        // Validaciones existentes...
         if (entrada.isBefore(LocalDate.now())) {
             throw new ExcepcionesHotel("No se pueden reservar fechas pasadas");
         }
-
+    
         if (salida.isBefore(entrada)) {
             throw new ExcepcionesHotel("La fecha de salida debe ser posterior a la entrada");
         }
-
+    
         Habitacion hab = buscarHabitacion(numHab);
         if (hab.estado != EstadoHabitacion.DISPONIBLE) {
             throw new ExcepcionesHotel("Habitación no disponible");
         }
-
+    
         Cliente cli = buscarCliente(idCliente);
         if (!cli.puedeReservar()) {
             throw new ExcepcionesHotel("El cliente tiene demasiadas reservas activas (máximo 3)");
         }
-
+    
+        // Crear la reserva
         Reserva nueva = new Reserva(hab, cli, entrada, salida);
         reservas.add(nueva);
         cli.añadirReserva(nueva);
+        
+
         hab.estado = EstadoHabitacion.RESERVADA;
+        System.out.println("Estado de la habitación " + hab.numHab + " cambiado a RESERVADA."); 
+    
     }
 
     public void cancelarReserva(int idReserva) throws ExcepcionesHotel {
