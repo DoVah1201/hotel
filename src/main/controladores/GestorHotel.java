@@ -25,24 +25,26 @@ public class GestorHotel {
 
     private void iniciarHotel() {
         for (int i = 1; i <= 5; i++) {
-            habitaciones.add(new habitacion(100 + i, tipohabitacion.INDIVIDUAL, ""));
+            habitaciones.add(new habitacion(100 + i, tipohabitacion.INDIVIDUAL));
         }
 
         for (int i = 1; i <= 5; i++) {
-            habitaciones.add(new habitacion(200 + i, tipohabitacion.DOBLE, ""));
+            habitaciones.add(new habitacion(200 + i, tipohabitacion.DOBLE));
         }
 
         for (int i = 1; i <= 5; i++) {
-            habitaciones.add(new habitacion(300 + i, tipohabitacion.SUITE, ""));
+            habitaciones.add(new habitacion(300 + i, tipohabitacion.SUITE));
         }
     }
 
-    public habitacion buscarHabitacion(int numHab) {
+    public habitacion buscarHabitacion(int numHab) throws excepcionesHotel {
         for (habitacion h : habitaciones) {
             if (h.numHab == numHab) {
                 return h;
             }
         }
+
+        throw new excepcionesHotel("Habitación no encontrada");
     }
 
     public void hacerReserva(int numHab, int idCliente, LocalDate entrada, LocalDate salida) throws excepcionesHotel {
