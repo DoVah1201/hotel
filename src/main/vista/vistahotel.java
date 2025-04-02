@@ -33,7 +33,7 @@ public int leer() {
 }
 
 public String[] registroCliente() {
-    System.out.println("\n--- NUEVO CLIENTE ---");
+    System.out.println("--- NUEVO CLIENTE ---");
     System.out.print("Nombre completo: ");
     String nombre = scanner.nextLine();
     return new String[]{nombre};
