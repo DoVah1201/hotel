@@ -1,17 +1,17 @@
-package src.main.model;
+package model;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class cliente {
+public class Cliente {
     private static int ultimoId = 0;
 
     public int id;
     public String nombre;
-    public List<reserva> reservasActuales;
-    public List<reserva> historialReservas;
+    public List<Reserva> reservasActuales;
+    public List<Reserva> historialReservas;
 
-    public cliente(String nombre) {
+    public Cliente(String nombre) {
         this.id = ++ultimoId;
         this.nombre = nombre;
         this.reservasActuales = new ArrayList<>();
@@ -22,11 +22,11 @@ public class cliente {
         return reservasActuales.size() < 3;
     }
     
-    public void añadirReserva(reserva r) {
+    public void añadirReserva(Reserva r) {
         reservasActuales.add(r);
     }
 
     public String toString() {
-        return "Cliente #" + id + ": " + nombre;
+        return "Cliente #" + id + ": " + nombre + " (Reservas activas: " + reservasActuales.size() + ")";
     }
 }
