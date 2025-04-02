@@ -2,6 +2,7 @@ package src.main.vista;
 import java.time.LocalDate;
 import java.time.format.DateTimeParseException;
 import java.util.Scanner;
+import java.lang.*;
 
 public class vistahotel {
         
@@ -25,7 +26,7 @@ public void Menu () {
 
 public int leer() {
     try {
-        return Interger.parseInt(scanner.nextLine());
+        return Integer.parseInt(scanner.nextLine());
     } catch (NumberFormatException e) {
         return -1;
     }
@@ -39,7 +40,7 @@ public String[] registroCliente() {
 }
 
 public Object[] datosReserva() {
-    System.out.println("\n--- NUEVA RESERVA ---");
+    System.out.println("--- NUEVA RESERVA ---");
     
     System.out.print("Número de habitación: ");
     int numHab = Integer.parseInt(scanner.nextLine());

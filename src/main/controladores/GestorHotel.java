@@ -45,12 +45,12 @@ public class GestorHotel {
         }
     }
 
-    public void hacerReserva(int numHab, int idCliente, LocalDate in, LocalDate out) throws excepcionesHotel {
-        if (in.isBefore(LocalDate.now())) {
+    public void hacerReserva(int numHab, int idCliente, LocalDate entrada, LocalDate salida) throws excepcionesHotel {
+        if (entrada.isBefore(LocalDate.now())) {
             throw new excepcionesHotel("No se pueden reservar fechas pasadas");
         }
 
-        if (out.isBefore(in)) {
+        if (salida.isBefore(entrada)) {
             throw new excepcionesHotel("La fecha de salida debe ser posterior a la entrada");
         }
 
