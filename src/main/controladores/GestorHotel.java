@@ -37,12 +37,14 @@ public class GestorHotel {
         }
     }
 
-    public habitacion buscarHabitacion(int numHab) {
+    public habitacion buscarHabitacion(int numHab) throws excepcionesHotel {
         for (habitacion h : habitaciones) {
             if (h.numHab == numHab) {
                 return h;
             }
         }
+
+        throw new excepcionesHotel("Habitación no encontrada");
     }
 
     public void hacerReserva(int numHab, int idCliente, LocalDate entrada, LocalDate salida) throws excepcionesHotel {
