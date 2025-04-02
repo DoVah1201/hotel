@@ -79,7 +79,7 @@ public class GestorHotel {
             throw new excepcionesHotel("El cliente tiene demasiadas reservas");
         }
 
-        reserva nueva = new reserva(hab, cli, in, out);
+        reserva nueva = new reserva(hab, cli, entrada, salida);
         reservas.add(nueva);
         cli.añadirReserva(nueva);
         hab.estado = estadohabitacion.RESERVADA;
