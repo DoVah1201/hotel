@@ -88,4 +88,26 @@ public class GestorHotel {
 
         System.out.println("Reserva realizada con éxito: " + nueva);
     }
+
+    public void cancelarReserva(int idReserva) throws excepcionesHotel {
+        reserva reservaCancelar = null;
+        for (reserva r : reservas) {
+            if (r.id == idReserva) {
+                reservaCancelar = r;
+                break;
+            }
+        }
+        
+        if (reservaCancelar == null) {
+            throw new excepcionesHotel("Reserva no encontrada");
+        }
+        
+        if (reservaCancelar.entrada.isBefore(LocalDate.now())) {
+            throw new excepcionesHotel("No se puede cancelar una reserva ya comenzada");
+        }
+        
+        reservaCancelar.habitacion.estado = estadohabitacion.DISPONIBLE;
+        reservaCancelar.cliente.reservasActuales.remove(reservaCancelar);
+        reservas.remove(reservaCancelar);
+    }
 }

@@ -67,4 +67,10 @@ public class vistahotel {
     public void Exito(String mensaje) {
         System.out.println("ÉXITO: " + mensaje);
     }
+
+    public int datosCancelacion() {
+        System.out.println("--- CANCELAR RESERVA ---");
+        System.out.print("ID de reserva a cancelar: ");
+        return Integer.parseInt(scanner.nextLine());
+    }
 }
