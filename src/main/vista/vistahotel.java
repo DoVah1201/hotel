@@ -21,8 +21,8 @@ public class vistahotel {
         System.out.println("Escoja una opcion");
     }
 
-    public String leer() {
-        return scanner.nextLine();
+    public int leer() {
+        return scanner.nextInt();
     }
 
     public String[] registroCliente() {
