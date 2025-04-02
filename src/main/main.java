@@ -39,10 +39,16 @@ public class main {
                         break;
 
                     case 3:
-                    System.out.println("\n--- HABITACIONES ---");
-                        for (model.habitacion h : model.habitacion) {
+                    System.out.println("--- HABITACIONES ---");
+                        for (src.main.model.habitacion h : model.habitacion toString()) {
                             System.out.println(h);
                         }
+
+                        break;
+
+                    case 4:
+
+
 
                         break;
 
