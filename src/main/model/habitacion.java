@@ -4,13 +4,11 @@ public class habitacion {
     public int numHab;
     public tipohabitacion tipo;
     public estadohabitacion estado;
-    private String descripcion;
 
-    public habitacion(int numHab, tipohabitacion tipo, String descripcion) {
+    public habitacion(int numHab, tipohabitacion tipo) {
         this.numHab = numHab;
         this.tipo = tipo;
         this.estado = estadohabitacion.DISPONIBLE;
-        this.descripcion = descripcion;
     }
     
     public tipohabitacion getTipo() {
