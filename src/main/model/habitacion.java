@@ -5,10 +5,12 @@ public class habitacion {
     public tipohabitacion tipo;
     public estadohabitacion estado;
 
-    public habitacion(int numHab, tipohabitacion tipo) {
+
+    public habitacion(int numHab, tipohabitacion tipo, estadohabitacion ESTADO) {
         this.numHab = numHab;
         this.tipo = tipo;
         this.estado = estadohabitacion.DISPONIBLE;
+        
     }
     
     public tipohabitacion getTipo() {

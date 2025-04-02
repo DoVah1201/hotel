@@ -22,6 +22,7 @@ public class reserva {
         this.cliente = cliente;
         this. entrada = entrada;
         this.salida =salida;
+        this.precioCalculado();
 
     }
 

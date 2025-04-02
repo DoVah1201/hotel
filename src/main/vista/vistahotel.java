@@ -22,7 +22,9 @@ public class vistahotel {
     }
 
     public int leer() {
-        return scanner.nextInt();
+        int opcion = scanner.nextInt();
+        scanner.nextLine();
+        return opcion;
     }
 
     public String[] registroCliente() {
@@ -36,10 +38,10 @@ public class vistahotel {
         System.out.println("--- NUEVA RESERVA ---");
         
         System.out.print("Número de habitación: ");
-        String numHab = scanner.nextLine();
-        
+        int numHab = Integer.parseInt(scanner.nextLine());
+            
         System.out.print("ID de cliente: ");
-        String idCliente = scanner.nextLine();
+        int idCliente = Integer.parseInt(scanner.nextLine());
         
         LocalDate entrada = Fecha("Fecha de entrada (YYYY-MM-DD): ");
         LocalDate salida = Fecha("Fecha de salida (YYYY-MM-DD): ");

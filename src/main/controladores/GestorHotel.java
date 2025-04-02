@@ -25,15 +25,15 @@ public class GestorHotel {
 
     private void iniciarHotel() {
         for (int i = 1; i <= 5; i++) {
-            habitaciones.add(new habitacion(100 + i, tipohabitacion.INDIVIDUAL, ""));
+            habitaciones.add(new habitacion(100 + i, tipohabitacion.INDIVIDUAL, estadohabitacion.DISPONIBLE));
         }
 
         for (int i = 1; i <= 5; i++) {
-            habitaciones.add(new habitacion(200 + i, tipohabitacion.DOBLE, ""));
+            habitaciones.add(new habitacion(200 + i, tipohabitacion.DOBLE, estadohabitacion.DISPONIBLE));
         }
 
         for (int i = 1; i <= 5; i++) {
-            habitaciones.add(new habitacion(300 + i, tipohabitacion.SUITE, ""));
+            habitaciones.add(new habitacion(300 + i, tipohabitacion.SUITE, estadohabitacion.DISPONIBLE));
         }
     }
 

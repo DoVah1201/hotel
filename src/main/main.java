@@ -3,16 +3,21 @@ package src.main;
 import src.main.controladores.*;
 import src.main.vista.*;
 import src.main.excepciones.*;
-import src.main.model.*;
+import src.main.model.estadohabitacion;
+import src.main.model.habitacion;
+import src.main.model.tipohabitacion;
 import java.util.Arrays;
 
 public class main {
 
-    public static void hotel (String [] args){
+    public static void main (String [] args){
 
         GestorHotel controlador = new GestorHotel();
         vistahotel vista = new vistahotel();
+        
 
+        
+        
         System.out.println("BIENVENIDO AL SISTEMA DE RESERVAS DEL HOTEL");
 
         boolean Salir = false;
@@ -40,8 +45,8 @@ public class main {
 
                     case 3:
                     System.out.println("--- HABITACIONES ---");
-                        for (src.main.model.habitacion h : model.habitacion toString()) {
-                            System.out.println(h);
+                        for (src.main.model.habitacion h : controlador.habitaciones) {
+                            System.out.println();
                         }
 
                         break;
